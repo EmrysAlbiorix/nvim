@@ -9,10 +9,16 @@ vim.opt.relativenumber = true
 
 -- Main controls
 vim.keymap.set("n", "<leader>pv", ":Oil<CR>", { desc = "Open parent directory" })
-vim.keymap.set("n", "<leader>rl", ":update<CR> :source ~/.config/nvim/init.lua<CR>", { desc = "Reload lua config" })
 vim.keymap.set("n", "<leader>so", ":so<CR>", { desc = "Reload current file" })
 vim.keymap.set("n", "<leader>w", ":write<CR>", { desc = "Save current file" })
 vim.keymap.set("n", "<leader>q", ":quit<CR>", { desc = "Quit vim" })
+
+-- Reload primary config file
+vim.keymap.set("n", "<leader>rl", function()
+	print("Goibniu Reloaded")
+	vim.cmd("update")
+	vim.cmd("source ~/.config/nvim/init.lua")
+end, { desc = "Reload lua config" })
 
 -- Reformats the current file
 vim.keymap.set("n", "<leader>rf", function()

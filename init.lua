@@ -3,7 +3,7 @@
 -- === === === === === === === === === ===
 
 require("goibniu") -- This is my current nvim layout
-print("Goibniu Reloaded")
+print("Goibniu")
 
---require("jeff")
+--require("jeff") -- This is nvim layout pulled from Jeff
 --print("Jeff layout initiated")

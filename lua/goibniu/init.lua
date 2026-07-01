@@ -3,7 +3,6 @@ require("goibniu.packs")
 require("goibniu.options")
 require("goibniu.format")
 require("goibniu.minuet")
-print("hello from Goibniu")
 
 -- === === === === === === === === === ===
 --          LSP CONFIGURATION
