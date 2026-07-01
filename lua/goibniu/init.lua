@@ -161,10 +161,6 @@ require("gitsigns").setup({
 			return nil
 		end
 	end,
-	--signs_style = {
-	-- or just use the default icons from fugitive
-	-- this keeps git blame and other commands working nicely with both plugins
-	--},
 })
 
 -- === === === === === === === === === ===
