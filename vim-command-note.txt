@@ -1,0 +1,6 @@
+Note on interesting command-line vim command:
+
+    :%s/{old}/{new}/g       Find and replace all occurrences in the file
+    :%s/{old}/{new}/gc      Find and replace with confirmation for each
+    :noh                    Clear search highlighting
+    :help {topic}           Open help documentation, e.g., :help key-notation
