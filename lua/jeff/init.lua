@@ -36,7 +36,12 @@ vim.o.inccommand = "split"
 vim.api.nvim_create_autocmd("TextYankPost", { callback = vim.hl.on_yank })
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
-vim.keymap.set("n", "<leader>rl", ":update<CR> :source ~/.config/nvim/init.lua<CR>")
+vim.keymap.set("n", "<leader>rl", function()
+	print("Jeff Layout Reloaded")
+	vim.cmd("update")
+	vim.cmd("source ~/.config/nvim/init.lua")
+end, { desc = "Reload lua config" })
+
 vim.keymap.set("n", "<leader>w", ":write<CR>")
 vim.keymap.set("n", "<leader>q", ":quit<CR>")
 
