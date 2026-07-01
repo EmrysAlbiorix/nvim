@@ -67,6 +67,8 @@ vim.keymap.set("n", "<leader>gT", function()
 	vim.cmd("Git log --graph --oneline --decorate")
 end, { desc = "Git log graph (current branch)" })
 
+-- Consider using vim-flog for nicer looking tree if basic setup becomes an issue
+
 -- === === === === === === === === === ===
 --           TERMINAL COMMANDS
 -- === === === === === === === === === ===
