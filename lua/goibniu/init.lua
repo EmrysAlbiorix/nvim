@@ -164,6 +164,23 @@ require("gitsigns").setup({
 })
 
 -- === === === === === === === === === ===
+--                 LUALINE
+-- === === === === === === === === === ===
+require("lualine").setup({
+	options = {
+		theme = "auto",
+	},
+	sections = {
+		lualine_a = { "mode" },
+		lualine_b = { "diff", "diagnostics" },
+		lualine_c = { "branch" },
+		lualine_x = { "lsp_status" },
+		lualine_y = { { "filename", path = 1 } },
+		lualine_z = { "progress", "location" },
+	},
+})
+
+-- === === === === === === === === === ===
 --              FILE EXPLORER
 -- === === === === === === === === === ===
 require("mini.icons").setup()

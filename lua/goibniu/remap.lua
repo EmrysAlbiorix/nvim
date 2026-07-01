@@ -26,7 +26,7 @@ vim.keymap.set("n", "<leader><right>", ":vertical resize +2<CR>", { desc = "Incr
 
 -- Git functionality (using vimscript)
 vim.keymap.set("n", "<leader>gs", ":Git<CR>", { desc = "Git status" })
-vim.keymap.set("n", "<leader>ga", ":Git add<CR>", { desc = "Git add" })
+vim.keymap.set("n", "<leader>ga", ":Git add .<CR>", { desc = "Git add" })
 vim.keymap.set("n", "<leader>gc", ":Git commit<CR>", { desc = "Git commit" })
 vim.keymap.set("n", "<leader>gp", ":Git push<CR>", { desc = "Git push" })
 vim.keymap.set("n", "<leader>gl", ":Git pull<CR>", { desc = "Git pull" })
