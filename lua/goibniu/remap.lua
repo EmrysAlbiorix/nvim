@@ -95,3 +95,15 @@ vim.keymap.set("t", "<Esc>", "<C-\\><C-n>:q<CR>", { desc = "Exit and Close termi
 vim.keymap.set("n", "<leader>mp", "<cmd>Minuet duet predict<cr>", { desc = "Minuet duet predict" })
 vim.keymap.set("n", "<leader>ma", "<cmd>Minuet duet apply<cr>", { desc = "Minuet duet apply" })
 vim.keymap.set("n", "<leader>md", "<cmd>Minuet duet dismiss<cr>", { desc = "Minuet duet dismiss" })
+
+-- === === === === === === === === === ===
+--          XCODEBUILD COMMANDS
+-- === === === === === === === === === ===
+
+-- XCODEBUILD Keybinds
+vim.keymap.set("n", "<leader>xx", "<cmd>XcodebuildPicker<cr>", { desc = "Show Xcodebuild actions" })
+vim.keymap.set("n", "<leader>xf", "<cmd>XcodebuildProjectManager<cr>", { desc = "Project manager" })
+vim.keymap.set("n", "<leader>xb", "<cmd>XcodebuildBuild<cr>", { desc = "Build project" })
+vim.keymap.set("n", "<leader>xr", "<cmd>XcodebuildBuildRun<cr>", { desc = "Build & run project" })
+vim.keymap.set("n", "<leader>xt", "<cmd>XcodebuildTest<cr>", { desc = "Run tests" })
+vim.keymap.set("n", "<leader>xc", "<cmd>XcodebuildToggleCodeCoverage<cr>", { desc = "Toggle code coverage" })

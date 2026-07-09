@@ -17,4 +17,6 @@ vim.pack.add({
 	{ src = "https://github.com/tpope/vim-fugitive" },
 	{ src = "https://github.com/milanglacier/minuet-ai.nvim" },
 	{ src = "https://github.com/nvim-lualine/lualine.nvim" },
+	{ src = "https://github.com/MunifTanjim/nui.nvim" },
+	{ src = "https://github.com/wojciech-kulik/xcodebuild.nvim" },
 })

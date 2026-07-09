@@ -32,6 +32,7 @@ require("conform").setup({
 		toml = { "taplo" },
 		typescript = { "eslint_d", "prettierd" },
 		typescriptreact = { "eslint_d", "prettierd" },
+		swift = { "swiftformat" },
 	},
 	format_on_save = {
 		lsp_format = "fallback",
