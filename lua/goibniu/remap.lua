@@ -3,6 +3,11 @@ vim.g.mapleader = " "
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+-- === === === BASIC MOVEMENTS === === ===
+-- zz for line center
+-- zt for line top
+-- zb for line bottom
+
 -- === === === === === === === === === ===
 --              FILE CONTROLS
 -- === === === === === === === === === ===
@@ -127,8 +132,3 @@ vim.keymap.set("n", "<leader>dc", "<cmd>DapContinue<cr>", { desc = "Continue" })
 vim.keymap.set("n", "<leader>do", "<cmd>DapStepOver<cr>", { desc = "Step over" })
 vim.keymap.set("n", "<leader>di", "<cmd>DapStepInto<cr>", { desc = "Step into" })
 vim.keymap.set("n", "<leader>du", "<cmd>lua require('dapui').toggle()<cr>", { desc = "Toggle DAP UI" })
-
--- Xcode-specific: build, run & attach the debugger in one step
-vim.keymap.set("n", "<leader>dd", function()
-	require("xcodebuild.integrations.dap").build_and_debug()
-end, { desc = "Build & debug (Xcode)" })

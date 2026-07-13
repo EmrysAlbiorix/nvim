@@ -112,3 +112,24 @@ for _, lang in ipairs({ "javascript", "typescript", "javascriptreact", "typescri
 		},
 	}
 end
+
+-- === === === === === === === === === ===
+--                   LUA
+-- === === === === === === === === === ===
+
+dap.adapters["local-lua"] = {
+	type = "executable",
+	command = "node",
+	args = { vim.fn.expand("~/.local/share/local-lua-dbg/extension/debugAdapter.js") },
+}
+
+dap.configurations.lua = {
+	{
+		name = "Launch",
+		type = "local-lua",
+		request = "launch",
+		cwd = "${workspaceFolder}",
+		program = { lua = "lua" },
+		args = {},
+	},
+}
