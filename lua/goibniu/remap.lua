@@ -76,6 +76,15 @@ end, { desc = "Git log graph (current branch)" })
 -- Consider using vim-flog for nicer looking tree if basic setup becomes an issue
 
 -- === === === === === === === === === ===
+--              MASON CONTROLS
+-- === === === === === === === === === ===
+
+-- Mason commands for package instal
+vim.keymap.set("n", "<leader>m", ":Mason <CR>", { desc = "Open Mason" })
+vim.keymap.set("n", "<leader>mi", ":MasonInstall ", { desc = "Start MasonInstall" })
+-- add more as needed, but most can be done through Mason interface
+
+-- === === === === === === === === === ===
 --           TERMINAL COMMANDS
 -- === === === === === === === === === ===
 
@@ -107,3 +116,19 @@ vim.keymap.set("n", "<leader>xb", "<cmd>XcodebuildBuild<cr>", { desc = "Build pr
 vim.keymap.set("n", "<leader>xr", "<cmd>XcodebuildBuildRun<cr>", { desc = "Build & run project" })
 vim.keymap.set("n", "<leader>xt", "<cmd>XcodebuildTest<cr>", { desc = "Run tests" })
 vim.keymap.set("n", "<leader>xc", "<cmd>XcodebuildToggleCodeCoverage<cr>", { desc = "Toggle code coverage" })
+
+-- === === === === === === === === === ===
+--                DAP
+-- === === === === === === === === === ===
+
+-- Dap Keybinds
+vim.keymap.set("n", "<leader>db", "<cmd>DapToggleBreakpoint<cr>", { desc = "Toggle breakpoint" })
+vim.keymap.set("n", "<leader>dc", "<cmd>DapContinue<cr>", { desc = "Continue" })
+vim.keymap.set("n", "<leader>do", "<cmd>DapStepOver<cr>", { desc = "Step over" })
+vim.keymap.set("n", "<leader>di", "<cmd>DapStepInto<cr>", { desc = "Step into" })
+vim.keymap.set("n", "<leader>du", "<cmd>lua require('dapui').toggle()<cr>", { desc = "Toggle DAP UI" })
+
+-- Xcode-specific: build, run & attach the debugger in one step
+vim.keymap.set("n", "<leader>dd", function()
+	require("xcodebuild.integrations.dap").build_and_debug()
+end, { desc = "Build & debug (Xcode)" })
