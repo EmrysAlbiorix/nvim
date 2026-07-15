@@ -25,4 +25,5 @@ vim.pack.add({
 	{ src = "https://github.com/mfussenegger/nvim-dap-python" },
 	{ src = "https://github.com/mxsdev/nvim-dap-vscode-js" },
 	{ src = "https://github.com/mfussenegger/nvim-jdtls" },
+	{ src = "https://github.com/folke/which-key.nvim" },
 })

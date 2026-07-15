@@ -4,6 +4,7 @@ require("goibniu.options")
 require("goibniu.format")
 require("goibniu.minuet")
 require("goibniu.dap")
+require("goibniu.whichkey")
 
 -- === === === === === === === === === ===
 --          LSP CONFIGURATION
