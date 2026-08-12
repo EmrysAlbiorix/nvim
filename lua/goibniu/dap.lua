@@ -133,3 +133,57 @@ dap.configurations.lua = {
 		args = {},
 	},
 }
+
+-- === === === === === === === === === ===
+--                   GO
+-- === === === === === === === === === ===
+
+dap.adapters.delve = {
+	type = "server",
+	port = "${port}",
+	executable = {
+		command = "dlv",
+		args = { "dap", "-l", "127.0.0.1:${port}" },
+	},
+}
+
+dap.configurations.go = {
+	{
+		type = "delve",
+		name = "Debug",
+		request = "launch",
+		program = "${file}",
+	},
+	{
+		type = "delve",
+		name = "Debug (package)",
+		request = "launch",
+		program = "${fileDirname}",
+	},
+	{
+		type = "delve",
+		name = "Debug test",
+		request = "launch",
+		mode = "test",
+		program = "${file}",
+	},
+}
+
+-- === === === === === === === === === ===
+--                  ZIG
+-- === === === === === === === === === ===
+-- Reuses the shared codelldb adapter defined above
+-- (same one Rust and C use)
+
+dap.configurations.zig = {
+	{
+		name = "Launch",
+		type = "codelldb",
+		request = "launch",
+		program = function()
+			return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/zig-out/bin/", "file")
+		end,
+		cwd = "${workspaceFolder}",
+		stopOnEntry = false,
+	},
+}
