@@ -56,14 +56,14 @@ vim.keymap.set("n", "<leader><right>", ":vertical resize +2<CR>", { desc = "Incr
 -- === === === === === === === === === ===
 
 -- Git functionality (using vimscript)
-vim.keymap.set("n", "<leader>gs", ":Git<CR>", { desc = "Git status" })
+vim.keymap.set("n", "<leader>gss", ":Git<CR>", { desc = "Git status" })
 vim.keymap.set("n", "<leader>ga", ":Git add .<CR>", { desc = "Git add" })
 vim.keymap.set("n", "<leader>gc", ":Git commit<CR>", { desc = "Git commit" })
 vim.keymap.set("n", "<leader>gp", ":Git push<CR>", { desc = "Git push" })
 vim.keymap.set("n", "<leader>gl", ":Git pull<CR>", { desc = "Git pull" })
 vim.keymap.set("n", "<leader>gd", ":Gvdiffsplit<CR>", { desc = "Git diff (vertical split)" })
 vim.keymap.set("n", "<leader>gD", ":Gvdiffsplit ", { desc = "Git diff against branch/commit" })
-vim.keymap.set("n", "<leader>gb", ":Git blame<CR>", { desc = "Git blame" })
+vim.keymap.set("n", "<leader>gbb", ":Git blame<CR>", { desc = "Git blame" })
 
 -- === === === === === === === === === ===
 --        BRANCH & FILE COMMANDS
@@ -79,6 +79,9 @@ vim.keymap.set("n", "<leader>gR", ":Git restore --staged ", { desc = "Git restor
 
 -- Merge
 vim.keymap.set("n", "<leader>gm", ":Git merge ", { desc = "Git merge branch" })
+
+-- Delete
+vim.keymap.set("n", "<leader>g-", ":Git branch -d ", { desc = "Git delete branch" })
 
 -- === === === === === === === === === ===
 --            GIT BRANCH TREE
