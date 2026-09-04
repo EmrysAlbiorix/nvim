@@ -26,6 +26,7 @@ require("conform").setup({
 		jsonc = { "prettierd" },
 		lua = { "stylua" },
 		markdown = { "prettierd" },
+		python = { "ruff_format" },
 		rust = { "rustfmt" },
 		scss = { "prettierd" },
 		sh = { "shfmt" },

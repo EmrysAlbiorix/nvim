@@ -54,6 +54,16 @@ vim.lsp.config("lua_ls", {
 	},
 })
 
+-- Configure ts_ls to use the global TypeScript install
+-- (falls back to this only when no local node_modules/typescript exists)
+vim.lsp.config("ts_ls", {
+	init_options = {
+		tsserver = {
+			path = vim.fn.system("npm root -g"):gsub("\n", "") .. "/typescript/lib",
+		},
+	},
+})
+
 -- Enable all servers
 vim.lsp.enable({
 	"lua_ls",

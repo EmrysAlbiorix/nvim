@@ -61,8 +61,24 @@ vim.keymap.set("n", "<leader>ga", ":Git add .<CR>", { desc = "Git add" })
 vim.keymap.set("n", "<leader>gc", ":Git commit<CR>", { desc = "Git commit" })
 vim.keymap.set("n", "<leader>gp", ":Git push<CR>", { desc = "Git push" })
 vim.keymap.set("n", "<leader>gl", ":Git pull<CR>", { desc = "Git pull" })
-vim.keymap.set("n", "<leader>gd", ":Gdiff<CR>", { desc = "Git diff" })
+vim.keymap.set("n", "<leader>gd", ":Gvdiffsplit<CR>", { desc = "Git diff (vertical split)" })
+vim.keymap.set("n", "<leader>gD", ":Gvdiffsplit ", { desc = "Git diff against branch/commit" })
 vim.keymap.set("n", "<leader>gb", ":Git blame<CR>", { desc = "Git blame" })
+
+-- === === === === === === === === === ===
+--        BRANCH & FILE COMMANDS
+-- === === === === === === === === === ===
+
+-- Switch branches
+vim.keymap.set("n", "<leader>gsw", ":Git switch ", { desc = "Git switch branch" })
+vim.keymap.set("n", "<leader>gsc", ":Git switch -c ", { desc = "Git switch (create new branch)" })
+
+-- Restore files
+vim.keymap.set("n", "<leader>gr", ":Git restore ", { desc = "Git restore file" })
+vim.keymap.set("n", "<leader>gR", ":Git restore --staged ", { desc = "Git restore (unstage) file" })
+
+-- Merge
+vim.keymap.set("n", "<leader>gm", ":Git merge ", { desc = "Git merge branch" })
 
 -- === === === === === === === === === ===
 --            GIT BRANCH TREE
