@@ -63,7 +63,7 @@ vim.keymap.set("n", "<leader>gp", ":Git push<CR>", { desc = "Git push" })
 vim.keymap.set("n", "<leader>gl", ":Git pull<CR>", { desc = "Git pull" })
 vim.keymap.set("n", "<leader>gd", ":Gvdiffsplit<CR>", { desc = "Git diff (vertical split)" })
 vim.keymap.set("n", "<leader>gD", ":Gvdiffsplit ", { desc = "Git diff against branch/commit" })
-vim.keymap.set("n", "<leader>gbb", ":Git blame<CR>", { desc = "Git blame" })
+vim.keymap.set("n", "<leader>gb", ":Git blame<CR>", { desc = "Git blame" })
 
 -- === === === === === === === === === ===
 --        BRANCH & FILE COMMANDS
