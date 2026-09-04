@@ -74,11 +74,14 @@ vim.keymap.set("n", "<leader>gsw", ":Git switch ", { desc = "Git switch branch" 
 vim.keymap.set("n", "<leader>gsc", ":Git switch -c ", { desc = "Git switch (create new branch)" })
 
 -- Restore files
-vim.keymap.set("n", "<leader>gr", ":Git restore ", { desc = "Git restore file" })
-vim.keymap.set("n", "<leader>gR", ":Git restore --staged ", { desc = "Git restore (unstage) file" })
+vim.keymap.set("n", "<leader>grr", ":Git restore ", { desc = "Git restore file" })
+vim.keymap.set("n", "<leader>grs", ":Git restore --staged ", { desc = "Git restore (unstage) file" })
 
 -- Merge
 vim.keymap.set("n", "<leader>gm", ":Git merge ", { desc = "Git merge branch" })
+
+-- Rebase
+vim.keymap.set("n", "<leader>gR", ":Git rebase ", { desc = "Git rebase branch" })
 
 -- Delete
 vim.keymap.set("n", "<leader>g-", ":Git branch -d ", { desc = "Git delete branch" })
