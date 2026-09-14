@@ -194,9 +194,7 @@ require("lualine").setup({
 -- === === === === === === === === === ===
 --            XCODEBUILD.NVIM
 -- === === === === === === === === === ===
-require("xcodebuild").setup({
-	-- defaults are sane; override here as you tune your workflow
-})
+require("xcodebuild").setup({})
 
 -- === === === === === === === === === ===
 --              FILE EXPLORER
