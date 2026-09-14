@@ -202,4 +202,8 @@ require("xcodebuild").setup({
 --              FILE EXPLORER
 -- === === === === === === === === === ===
 require("mini.icons").setup()
-require("oil").setup()
+require("oil").setup({
+	view_options = {
+		show_hidden = true,
+	},
+})
