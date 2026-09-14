@@ -6,8 +6,8 @@ require("which-key").setup({
 	preset = "modern",
 })
 
--- Group labels — purely cosmetic, groups your leader-prefixed
--- keymaps under a readable heading in the popup
+-- Group labels — purely cosmetic,
+-- groups leader-prefixed keymaps under a readable heading in the popup
 require("which-key").add({
 	{ "<leader>g", group = "Git" },
 	{ "<leader>f", group = "Telescope/Find" },
