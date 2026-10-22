@@ -21,21 +21,27 @@ require("mason").setup({
 })
 
 -- Treesitter setup
+-- The swift parser has to be generated with the tree-sitter CLI, so it is only
+-- installed on macOS, where xcodebuild.nvim is actually used.
+local ts_parsers = {
+	"typescript",
+	"tsx",
+	"javascript",
+	"html",
+	"css",
+	"lua",
+	"bash",
+	"rust",
+	"graphql",
+	"json",
+}
+if vim.fn.has("mac") == 1 then
+	table.insert(ts_parsers, "swift")
+end
+
 ---@diagnostic disable-next-line: missing-fields
 require("nvim-treesitter.configs").setup({
-	ensure_installed = {
-		"typescript",
-		"tsx",
-		"javascript",
-		"html",
-		"css",
-		"lua",
-		"bash",
-		"rust",
-		"graphql",
-		"json",
-		"swift",
-	},
+	ensure_installed = ts_parsers,
 	highlight = { enable = true },
 })
 
